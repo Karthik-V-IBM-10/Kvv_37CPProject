@@ -1,0 +1,17 @@
+version: "1.0"
+projectName: Kvv_37CPProject
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: tppWorkflow
+    type: workflow
+    uid: fl20061ef824ba473fbe86b0dd9074b6d7
+    stepId: a0
+    reference: Serv_1:Sum
+- runtimeAlias: kvv_37CP
+  assets:
+  - name: tppWorkflow
+    type: workflow
+    uid: fl20061ef824ba473fbe86b0dd9074b6d7
+    stepId: a1
+    reference: Serv_1:Sum
