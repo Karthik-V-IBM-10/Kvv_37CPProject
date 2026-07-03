@@ -20,7 +20,102 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: SSL_JDBC_Test
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/prabhakaribm
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+- name: PackX
+  gitServerName: kvv
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
+services:
+- serviceName: project.kvv_37cp.integrations:JMSFlowTest
+  packages:
+  - name: Kvv_37CPProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: publisher:publisher
+  packages:
+  - name: JMSTest
+    version: "1.0"
+- serviceName: pub.jms:send
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.875
+- serviceName: project.kvv_37cp.integrations:JMS_JNDI_SSL
+  packages:
+  - name: Kvv_37CPProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: jms2wayssl_publisher:jms2wayssl_publisher
+  packages:
+  - name: JMS2waySSL
+    version: "1.0"
+- serviceName: project.kvv_37cp.integrations:SSL_JDBC_test
+  packages:
+  - name: Kvv_37CPProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:getSSLandCloseConn
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:startTransaction
+  packages:
+  - name: WmART
+    version: 12.1.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:get_ssl
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:commitTransaction
+  packages:
+  - name: WmART
+    version: 12.1.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.connection:disableConnection
+  packages:
+  - name: WmART
+    version: 12.1.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
